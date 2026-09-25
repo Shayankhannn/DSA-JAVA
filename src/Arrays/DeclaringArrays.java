@@ -16,6 +16,8 @@ public class DeclaringArrays {
         daysInMonth[10] = 30 ;
         daysInMonth[11] = 31 ;
 
+
+
         String[] monthNames = {"Jan","feb","march","apr","may","june","july","aug","sept","nov","dec"};
 
         for (int i = 0; i < daysInMonth.length; i++) {
