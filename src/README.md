@@ -6,7 +6,7 @@ list
 map
 set
 
--- it doesnt allow storing rimitive data type but only an obj
+-- it doesnt allow storing primitive data type but only an obj
 - primitive type must be store in appropriate wrapper class 
 - -like integar for int 
 - its automatically wrapped in wrapper classes when we add them in collection
