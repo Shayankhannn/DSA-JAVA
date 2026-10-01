@@ -39,3 +39,10 @@ Maps - are perfect for storing and retrieving data using key value pairs
 Sets - excel at ensuring that no duplicate elements are stored 
 
 Generics ensure type safety in collection 
+
+
+Flexibility,variable data - choose arraylist
+
+Efficiency,fixed data - choose array
+
+
