@@ -66,6 +66,24 @@ public class SeatBooking {
     // Method to update a booking seat number
     public void updateBooking(String oldSeatNumber, String newSeatNumber) {
         // TODO 9: iterate through the list of booked seats
+        boolean found = false;
+        for (Seat seat : bookedSeatsList){
+            if (seat.getSeatNumber().equals(newSeatNumber)  && !seat.isCanceled() && seat.isBooked()) {
+                System.out.println(newSeatNumber + " seat is already booked!");
+
+                return;
+
+            }
+            if (seat.getSeatNumber().equals(oldSeatNumber)  && !seat.isCanceled() && seat.isBooked()){
+                seat.setSeatNumber(newSeatNumber);
+                System.out.println(oldSeatNumber + " seat was updated to "+ newSeatNumber);
+                found = true;
+                return;
+            }
+
+        }
+        if (!found)
+                System.out.println(oldSeatNumber + " seat was not found "   );
         // TODO 10: check if the seat number matches the old seat number and is not canceled
         // TODO 11: update the seat number to the new seat number
         // confirm the update to the user
