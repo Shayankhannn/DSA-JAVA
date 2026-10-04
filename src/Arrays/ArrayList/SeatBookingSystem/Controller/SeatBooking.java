@@ -94,6 +94,14 @@ public class SeatBooking {
         // TODO 13: check if the bookedSeatsList is empty, inform the user that no bookings have been made yet
         // TODO 14: iterate through the list of booked seats, Check if the seat is booked and not canceled
         // TODO 15: display the seat number and booking date
+        if (bookedSeatsList.isEmpty()) System.out.println("there has been no booking yet");
+
+        for (Seat seat : bookedSeatsList){
+            if (seat.isBooked() && !seat.isCanceled()){
+                System.out.println("Seat Number : " + seat.getSeatNumber());
+                System.out.println("Seat Booking Date : " + seat.getBookingDate());
+            }
+        }
 
     }
 }
