@@ -1,4 +1,4 @@
-package Arrays.ArrayList;
+package ArrayList;
 
 
 // Challenge: Manage a book recommendation app

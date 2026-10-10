@@ -1,4 +1,4 @@
-package Arrays.ArrayList.SeatReservationSystem.Model;
+package ArrayList.SeatReservationSystem.Model;
 
 
 

@@ -1,8 +1,8 @@
-package Arrays.ArrayList.SeatReservationSystem.Controller;
+package ArrayList.SeatReservationSystem.Controller;
 
 
 
-import Arrays.ArrayList.SeatReservationSystem.Model.Seat;
+import ArrayList.SeatReservationSystem.Model.Seat;
 
 import java.util.ArrayList;
 import java.util.Date;

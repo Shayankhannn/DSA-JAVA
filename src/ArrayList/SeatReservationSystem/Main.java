@@ -1,5 +1,5 @@
-package Arrays.ArrayList.SeatReservationSystem;
-import Arrays.ArrayList.SeatReservationSystem.Controller.SeatBooking;
+package ArrayList.SeatReservationSystem;
+import ArrayList.SeatReservationSystem.Controller.SeatBooking;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
