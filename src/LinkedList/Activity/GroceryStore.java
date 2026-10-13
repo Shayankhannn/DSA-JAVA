@@ -19,5 +19,6 @@ public class GroceryStore {
         list.add("Cheese");
 
         System.out.println("final list"+list);
+
     }
 }
