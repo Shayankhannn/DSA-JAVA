@@ -9,6 +9,13 @@ import LinkedList.PlaylistManager.Model.Song;
  * This class supports checking for duplicate songs, moving to the next or previous song,
  * and displaying the current playlist.
  */
+
+/**
+ * The SinglyLinkedPlaylistManager class is responsible for managing a playlist of songs using a Singly linked list structure.
+ * It provides methods to add, remove, and navigate through songs in the playlist.
+ * This class supports checking for duplicate songs, moving to the next or previous song,
+ * and displaying the current playlist.
+ */
 public class SinglyLinkedPlaylistManager {
     class Node {
         Song song; //Holds the data for each node, which in this case is a Song object.
@@ -30,14 +37,35 @@ public class SinglyLinkedPlaylistManager {
     // Method to add a song to the playlist
     public void addFavoriteSong(Song newSong) {
         // TODO 1: check if the song already exists in the playlist
+
         // TODO 2: create a new node for the song
         // TODO 3: check if the playlist is empty
+        if (head == null) {
+            head = new Node(newSong);
+            current = head;
+
+
+        }
+       else if (isDuplicate(newSong)){
+            System.out.println("Song already exist!");
+            return;
+        }else
+             {
+                Node newNode = new Node(newSong);
+                Node temp = head;
+                while (temp.next != null) {
+                    temp = temp.next;
+                }
+                temp.next = newNode;
+            }
+
+        System.out.println(newSong.getTitle() + " added to the playlist.");
+
         //  If empty, set the new node as the head of the list, initialize the current node to the head.
         // TODO 4: if not empty, find the last node in the list
         //  Traverse the list to find the last node
         //TODO 5: set the next of the last node to the new node
         //print a confirmation message that the song was added
-        System.out.println(newSong.getTitle() + " added to the playlist.");
     }
 
     private boolean isDuplicate(Song song) {
@@ -105,5 +133,4 @@ public class SinglyLinkedPlaylistManager {
         return head == null;
     }
 }
-
 
