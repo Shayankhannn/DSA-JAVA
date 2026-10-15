@@ -82,10 +82,39 @@ public class SinglyLinkedPlaylistManager {
     // Method to remove a song from the playlist based on the given index
     public void removeFavoriteSong(int index) {
         // TODO 6: Check if the index is less than 1. If so, print “Invalid index.” and return.
+        if (index < 1){
+            System.out.println("Invalid Index no please try again !");
+            return;
+        }
         // TODO 7: Check if the playlist is empty (head == null). If so, print “Playlist is empty.” and return.
+       if (head == null ){
+           System.out.println("Playlist is empty..");
+           return;
+       }
         // TODO 8: If the index is 1, set head to head.next, print the title of the removed song, and return.
+        if (index == 1){
+            System.out.println(head.song.getTitle() + " removed from the playlist.");
+            head = head.next;
+            return;
+        }
         // TODO 9: Traverse the playlist using a loop, keeping track of current, previous, and count.
         // TODO 10: If current is null after the loop, print “Invalid index.”
+     int count = 1;
+        Node current = head;
+        Node prev = null;
+        while (current != null && count < index){
+            prev = current;
+         current = current.next;
+         count++;
+     }
+
+        if (current == null){
+            System.out.println("Invalid Index");
+        }else {
+            prev.next = current.next;
+            System.out.print(current.song.getTitle() + " removed from the playlist.");
+        }
+
         // TODO 11: If a valid node is found, adjust previous.next to remove the current node and print the title of the removed song.
     }
 
@@ -93,8 +122,19 @@ public class SinglyLinkedPlaylistManager {
     public void displayFavoriteSongs() {
         //TODO 12: check if the playlist is empty by verifying if head == null.
         // if empty, print “Playlist is empty.” and return.
+        if (head == null){
+            System.out.println("Playlist is empty..");
+            return;
+        }
         //TODO 13: initialize current to head and index to 1.
+        Node current = head;
+        int index = 1;
         //TODO 14: use a while loop to iterate through the playlist, printing each song’s index and details.
+        while (current != null) {
+            System.out.println(index + ".  " +current.song.getTitle() + " - " + current.song.getArtist());
+        current = current.next;
+        index++;
+        }
         //TODO 15: inside the loop, increment the index and update current to current.next.
     }
 
@@ -102,8 +142,17 @@ public class SinglyLinkedPlaylistManager {
     public void playNextFavoriteSong() {
         // TODO 16: check if there is no next song by verifying if current == null or current.next == null.
         // if so, print “No next song in the playlist.”
+
+        if (current == null || current.next == null){
+            System.out.println("No next song in the playlist.");
+        return;
+        }
         // TODO 17: if there is a next song, update current to current.next.
         // TODO 18: print the details of the now playing song.
+
+        current = current.next;
+        System.out.println(current.song.getTitle() + " - " + current.song.getArtist());
+
     }
 
     // Method to play the previous song in the playlist
