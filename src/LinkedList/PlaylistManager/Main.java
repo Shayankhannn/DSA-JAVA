@@ -1,9 +1,10 @@
 package LinkedList.PlaylistManager;
 
 
-import com.lesson.lab.controller.DoublyLinkedPlaylistManager;
-import com.lesson.lab.controller.SinglyLinkedPlaylistManager;
-import com.lesson.lab.model.Song;
+
+
+import LinkedList.PlaylistManager.Controller.SinglyLinkedPlaylistManager;
+import LinkedList.PlaylistManager.Model.Song;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
