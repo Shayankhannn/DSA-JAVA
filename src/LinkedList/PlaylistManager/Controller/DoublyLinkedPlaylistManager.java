@@ -1,7 +1,8 @@
 package LinkedList.PlaylistManager.Controller;
 
 
-import com.lesson.lab.model.Song;
+import LinkedList.PlaylistManager.Model.Song;
+
 
 /**
  * The DoublyLinkedPlaylistManager class manages a playlist of songs using a doubly linked list structure.
@@ -50,6 +51,7 @@ public class DoublyLinkedPlaylistManager {
             }
             last.next = newNode;
             //TODO 21: set the previous reference of the new node to the last node
+            newNode.previous = last;
         }
         System.out.println(newSong.getTitle() + " added to the playlist.");
     }
@@ -81,7 +83,9 @@ public class DoublyLinkedPlaylistManager {
             head = head.next;
             if (head != null) {
                 // TODO 22: updates the previous reference of the head with null if the first node is removed.
+           head.previous = null;
             }
+
             return;
         }
         Node current = head;
@@ -96,9 +100,11 @@ public class DoublyLinkedPlaylistManager {
             System.out.println(current.song.getTitle() + " removed from the playlist.");
             if (current.previous != null) {
                 //TODO 23: update the next reference of the previous node to skip over the current node.
+            current.previous.next = current.next;
             }
             if (current.next != null) {
                 //TODO 24: update the previous reference of the next node to point to the previous node of the current node.
+           current.next.previous = current.previous;
             }
         }
     }
@@ -134,6 +140,13 @@ public class DoublyLinkedPlaylistManager {
         // If no previous song exists, print a message indicating playlist is empty
         //TODO 26: sets current to current.previous
         //TODO 27: print the song that is now playing
+        if (current == null || current.previous == null) {
+            System.out.println("No previous song in the playlist.");
+        return;
+        }
+        current = current.previous;
+        System.out.println(current.song.getTitle() + " playing: " + current.song);
+
     }
     // Method to start playing from the first song in the playlist
     public void setCurrentToFirst() {

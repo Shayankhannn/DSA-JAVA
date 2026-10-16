@@ -48,3 +48,9 @@ Flexibility,variable data - choose arraylist
 Efficiency,fixed data - choose array
 
 
+
+Stacks
+
+infix notation - operators are between operands
+
+postfix notation - operators follow operands
