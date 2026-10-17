@@ -9,6 +9,8 @@ public class StudentInfoSystem {
     // TODO 1: Implement a method to add a new student to the ArrayList
     static boolean addStudent(Student student) {
         // YOUR CODE HERE
+        Student studentObj = new Student(student.getName());
+        students.add(studentObj);
         System.out.println("Student added: " + student.getName());
         return true;
     }

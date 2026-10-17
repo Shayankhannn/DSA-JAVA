@@ -12,6 +12,17 @@ public class ExamSchedule {
     // TODO 2: Implement logic to add an exam to the end of the linked list
     public void addExam(String examDetails) {
         // YOUR CODE HERE
+        ExamNode newExam = new ExamNode(examDetails);
+        if (head == null) {
+            head = newExam;
+            current = head;
+        }else {
+            while (current.next != null) {
+                current = current.next;
+            }
+            newExam.prev = current;
+            current.next = newExam;
+        }
     }
 
     // TODO 3: Implement the logic to move to the next exam in the list and displays it
