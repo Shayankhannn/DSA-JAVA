@@ -42,10 +42,7 @@ public class arrayList {
 
 //        lst3.clear(); - will remove everything from list
         System.out.println("remove element  ArrayList: " + lst3);
-
-
         // updating ARRAYLIST
-
         lst3.set(0,9); // it will update 0 element with 9
         System.out.println("updating element  ArrayList: " + lst3);
 
