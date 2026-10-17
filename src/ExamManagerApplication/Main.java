@@ -34,7 +34,7 @@ public class Main {
                     String nameForExam = scanner.nextLine();
                     Student studentForExam = StudentInfoSystem.findStudentByName(nameForExam);
                     if (studentForExam != null) {
-                        System.out.print("Enter exam date (e.g., 2023-10-15): ");
+                        System.out.print("Enter exam date (e.g., 2026-10-15): ");
                         String examDate = scanner.nextLine();
                         System.out.print("Enter exam location (e.g., Room 101): ");
                         String examLocation = scanner.nextLine();
