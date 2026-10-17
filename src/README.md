@@ -54,3 +54,11 @@ Stacks
 infix notation - operators are between operands
 
 postfix notation - operators follow operands
+
+
+Queues 
+
+FIFO - first in first out
+
+- Enqueue - add  to the rear to the end
+- Dequeue - remove element from the front 
