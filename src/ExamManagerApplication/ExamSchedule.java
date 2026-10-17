@@ -1,5 +1,4 @@
 package ExamManagerApplication;
-
 public class ExamSchedule {
     private ExamNode head;
     private ExamNode current;
@@ -13,16 +12,19 @@ public class ExamSchedule {
     public void addExam(String examDetails) {
         // YOUR CODE HERE
         ExamNode newExam = new ExamNode(examDetails);
+
         if (head == null) {
             head = newExam;
             current = head;
         }else {
-            while (current.next != null) {
-                current = current.next;
+            ExamNode temp = head;
+            while (temp.next != null) {
+                temp = temp.next;
             }
-            newExam.prev = current;
-            current.next = newExam;
+            newExam.prev = temp;
+            temp.next = newExam;
         }
+        System.out.println("Exam Added: " + newExam.examDetails);
     }
 
     // TODO 3: Implement the logic to move to the next exam in the list and displays it
@@ -30,13 +32,12 @@ public class ExamSchedule {
         // YOUR CODE HERE
         if (current == null){
             System.out.println("No exam available");
-        }else if (current.next != null){
-
-            current = current.next;
-            System.out.println("next exam :" + current.examDetails);
-        }else{
-            System.out.println("No next Exam Available!");
+            return;
         }
+
+        System.out.println("Next Exam: " + current.examDetails);
+        if (current.next != null)
+            current = current.next;
     }
 
     // TODO 4: Implement logic to move to the previous exam in the list and display it
@@ -44,13 +45,12 @@ public class ExamSchedule {
         // YOUR CODE HERE
         if (current == null){
             System.out.println("No exam available");
-        }else if (current.prev != null){
-
-            current = current.prev;
-            System.out.println("previous exam :" + current.examDetails);
-        }else{
-            System.out.println("No previous Exam Available!");
+            return;
         }
+
+        if (current.prev != null)
+            current = current.prev;
+        System.out.println("Previous Exam: " + current.examDetails);
     }
 
     public void viewAllExamSchedule() {
@@ -66,6 +66,5 @@ public class ExamSchedule {
         }
     }
 }
-
 
 
