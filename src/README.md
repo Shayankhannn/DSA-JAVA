@@ -68,3 +68,20 @@ HashMap
 
 - they are not ordered
 - they are designed for quick retrievals
+
+when to use
+
+- fast lookups
+- dynamic data sets
+- low colision rate
+
+
+Choosing the right data structure
+
+hashmap - for speed 
+
+treemap-linkedlist-arraylist -- sequence and sorting
+
+linkedlist - arraylist -- memory constraint
+
+hashmap is ideal to use for caching counting frequencies and quick lookup
