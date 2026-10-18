@@ -67,6 +67,14 @@ HashMap studentsMap = new HashMap();
     /* TODO 14: if the student exists, change the status to
         newStatus, and print a confirmation message. */
         // TODO 15: Print an error message if the student doesn't exist.
+
+        if ((Boolean) studentsMap.get(lastName)){
+            studentsMap.put(lastName, newStatus);
+            System.out.println("Student "+ lastName + "status was changed from 'UNDER-REVIEW' to 'ENROLLED");
+        }else {
+            System.out.println("Student doesn't exist!");
+        }
+
     }
         public void removeStudent(String lastName){
         /* TODO 17: using the lastName parameter, attempt to remove
