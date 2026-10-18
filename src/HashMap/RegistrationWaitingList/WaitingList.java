@@ -23,7 +23,7 @@ public class WaitingList {
         // TODO 12: Change the value of option to 2
         // TODO 16: Change the value of option to 3
         // TODO 20: Change the value of option to 4
-        int option = 3;
+        int option = 4;
 
 //                System.out.println();
         switch (option) {

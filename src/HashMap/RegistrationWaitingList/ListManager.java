@@ -83,5 +83,11 @@ HashMap studentsMap = new HashMap();
         information if the student was successfully removed. */
     /* TODO 19: if the student is not removed, print
         a statement that the student was not removed. */
+            if (studentsMap.containsKey(lastName)){
+                studentsMap.remove(lastName);
+                System.out.println("Student with last name " + lastName + " was successfully removed.");
+            }else {
+                System.out.println("Student with last name " + lastName + " Not found");
+            }
         }
     }
