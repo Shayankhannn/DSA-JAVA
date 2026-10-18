@@ -62,3 +62,9 @@ FIFO - first in first out
 
 - Enqueue - add  to the rear to the end
 - Dequeue - remove element from the front 
+
+
+HashMap
+
+- they are not ordered
+- they are designed for quick retrievals
