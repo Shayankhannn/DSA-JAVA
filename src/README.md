@@ -85,3 +85,74 @@ treemap-linkedlist-arraylist -- sequence and sorting
 linkedlist - arraylist -- memory constraint
 
 hashmap is ideal to use for caching counting frequencies and quick lookup
+
+
+Tree Map 
+
+works like linked hash map 
+
+- automatically sorts key value pairs 
+- alphabetically a to z 
+- numerically 0 to 9
+- string and number ascending order
+
+Comparator
+
+for types that donot have natural ordering in java use a pluggable ordering object called a coparaotr including those you define yourself 
+
+a comparator is any class that implements the java until comparator interface 
+
+
+Performance: 
+
+Due to its tree-based structure, TreeMap operations (put(), get(), remove()) have O(log n) complexity, which is slower than HashMap's O(1) for the same operations. TreeMap operations typically have O(log n) time complexity, while HashMap operations average O(1), but can degrade to O(n) in the worst-case scenario. This distinction is important when discussing the performance implications of each data structure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
