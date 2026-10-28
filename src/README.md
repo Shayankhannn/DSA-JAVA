@@ -108,7 +108,24 @@ Performance:
 Due to its tree-based structure, TreeMap operations (put(), get(), remove()) have O(log n) complexity, which is slower than HashMap's O(1) for the same operations. TreeMap operations typically have O(log n) time complexity, while HashMap operations average O(1), but can degrade to O(n) in the worst-case scenario. This distinction is important when discussing the performance implications of each data structure.
 
 
+comparing hashmap and treemap
 
+speed 
+
+- hashmap - faster with array and hash indexing 
+- treemap slower due to linked entries
+
+hashmap uses less memory
+
+order
+
+- hashmap doesnot maintain order
+- treemap maintain natural order and custom order - comparaotr
+
+navigation 
+
+- treemap sophisticated navigation access by sort order
+- hashmap cant access sort order
 
 
 
