@@ -127,6 +127,10 @@ navigation
 - treemap sophisticated navigation access by sort order
 - hashmap cant access sort order
 
+Searching algorithm
+
+binary search works  on sorted data
+
 
 
 
