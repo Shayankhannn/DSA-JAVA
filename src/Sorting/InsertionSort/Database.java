@@ -49,41 +49,49 @@ public class Database {
     }
 
 
-    /**************************************************************************
+
      // TODO 1: Uncomment the method
      public void insertionSort() {
      // TODO 2: Set a local variable, regCount, equal to the
      //      size of the registrations array
+         int regCount = registrations.size();
 
      // TODO 3: Create a for-loop that starts with unsortedIndx = 1
      //      and ends at i < regCount
-     for (... condition ...) {
+     for (int unsortedIndx = 1; unsortedIndx < regCount; unsortedIndx++ ) {
      // TODO 4: Initialize unsortedReg reference with the
      //      Registration at the unsortedIndx
+      Registration   unsortedReg = (Registration) registrations.get(unsortedIndx);
+
 
      // TODO 5: Initialize sortedIndx with the unsortedIndx - 1
+      int   sortedIndx = unsortedIndx-1;
+
 
      // TODO 6: Declare a while loop that ends when the sortedIndx >= 0
-     while (... condition ...) {
+     while (sortedIndx >= 0 ) {
 
      // TODO 7: Initialize sortedReg with the Registration at the
      //      sortedIndx
+      Registration   sortedReg = (Registration) registrations.get(sortedIndx);
 
      // TODO 9: Comment out the print statement and the sorted_Index-- statements.
-     System.out.println(unsortedIndx + " " + unsortedReg + ", " +
-     sortedIndx + " " + sortedReg.license);
-     sortedIndx--;
+//     System.out.println(unsortedIndx + " " + unsortedReg + ", " +
+//     sortedIndx + " " + sortedReg.license);
+//     sortedIndx--;
 
 
      // TODO 10: Declare an IF statement that uses the String
      //      method compareTo( ) to compare the license of the
      //      sortedReg to license of the unsortedReg
 
-     if (... condition ...) {
+     if (sortedReg.license.compareTo(unsortedReg.license) > 0 ) {
      // TODO 11: If the sortedReg license is greater than the
      //      unsortedReg license, then set the array element at
      //      sortedIndx + 1 to the sortedReg and Decrement the
      //      sortedIndx
+         registrations.set(sortedIndx+1, sortedReg);
+         sortedIndx--;
 
      } else {
      // TODO 12: If the sortedReg license is less than or equal
@@ -97,7 +105,7 @@ public class Database {
      //      to the unsortedReg
      }
      }
-     *************************************************************************************/
+
 
     public void bubbleSort() {
         int n = registrations.size();
@@ -126,7 +134,7 @@ public class Database {
         /* TODO 8: Replace the invocation of the bubbleSort() method
                    with an invocation of the insertionSort()
          */
-        db.bubbleSort();
+        db.insertionSort();
 
         System.out.println("\n******* Sorted List ******\n");
         db.printAll();
