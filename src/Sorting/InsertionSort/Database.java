@@ -100,6 +100,8 @@ public class Database {
      }
      }
 
+
+
      // TODO 13: After the while-loop but before returning to the
      //      top of the for-loop, set the element at sortedIndx + 1
      //      to the unsortedReg
