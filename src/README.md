@@ -133,6 +133,15 @@ binary search works  on sorted data
 
 
 
+Sorting
+
+bubble sort - each element is compared with its adjacent element -- O(n^2) - time complex
+
+Insertion sort - divides the list into sorted and unsorted groups an element is taken form the uunsorted group and place in correct position in sorted group -- O(n^2) - time complex
+
+selection sort - selects the smallest element from the unsorted group and move it into its correct position in sorted group -- O(n^2) - time complex
+
+
 
 
 
